@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WcfService1.data" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WcfService1.data" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53068/Service1.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="DataClass1">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Reportsrc" nillable="true" type="q1:ArrayOfKeyValueOfintReportrecR8Et_PRyU" />
+      <xs:element minOccurs="0" name="Reportsrc2" nillable="true" type="tns:ArrayOfReportrec" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataClass1" nillable="true" type="tns:DataClass1" />
+  <xs:complexType name="Reportrec">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="message" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Reportrec" nillable="true" type="tns:Reportrec" />
+  <xs:complexType name="ArrayOfReportrec">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Reportrec" nillable="true" type="tns:Reportrec" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReportrec" nillable="true" type="tns:ArrayOfReportrec" />
+</xs:schema>
